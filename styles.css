@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.sidebar {
+  background-color: #fb7185;
+  color: #fcf2f2;
+  grid-area: sidebar;
+}
+.header {
+  grid-area: header;
+  background-color: #fdfdfd;
+  z-index: 1;
+}
+.main-content {
+  overflow: auto;
+  grid-area: main;
+  background-color: #e2e8f0;
+}
+.icon {
+  width: 25px;
+}
+.navbar {
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  gap: 20px;
+  font-weight: 500;
+}
+.navbar h1 {
+  font-size: 1.7rem;
+}
+.navbar ul {
+  list-style: none;
+  font-size: 1.3rem;
+}
+.navbar-element a {
+  color: #fcf2f2;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.navbar-element .icon {
+  transition: all 0.2s ease;
+}
+
+.navbar-element:hover a {
+  transform: translateY(-5px);
+  text-shadow: 5px 7px 11px rgba(0, 0, 0, 0.3);
+  color: #fcf2f2;
+}
+
+.navbar-element:hover .icon {
+  transform: translateY(-5px);
+}
+
+li {
+  padding: 8px 0px;
+}
+
+.logo .icon {
+  width: 40px;
+}
+.logo,
+.navbar-element {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.header-elements {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 15px 40px;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 6px 4px 5px rgba(7, 7, 7, 0.118);
+}
+.search-container {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.searchbar {
+  width: 80%;
+  outline: none;
+  height: 2rem;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: #e2e8f0;
+  border: none;
+  transition: all 0.2s ease;
+}
+.searchbar:hover {
+  box-shadow: 0 5px 5px rgba(7, 7, 7, 0.118);
+}
+.searchbar:focus {
+  box-shadow: 0 5px 5px rgba(7, 7, 7, 0.118);
+}
+.mini-profile {
+  justify-content: end;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.profile-photo-icon {
+  width: 45px;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+.profile-photo-icon:hover {
+  box-shadow: 0 5px 5px rgba(7, 7, 7, 0.118);
+  transform: scale(0.9);
+}
+h3 {
+  font-size: 1.1rem;
+}
+.big-profile,
+.tr-card {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.big-profile img {
+  width: 70px;
+}
+.header-buttons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+button {
+  padding: 10px 15px;
+  width: 6.3rem;
+  font-weight: 500;
+  background-color: #fb7185;
+  color: #fcf2f2;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #fb7186a9;
+}
+.content {
+  margin-top: 20px;
+  padding: 15px 40px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  gap: 25px;
+}
+.projects {
+  grid-area: projects;
+}
+.projects > p,
+.announcements > p,
+.trending > p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.announcements {
+  grid-area: announcements;
+}
+.trending {
+  grid-area: trending;
+}
+.projects-list {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  padding: 35px;
+  background-color: #fdfdfd;
+  border-radius: 15px;
+  border-left: 7.5px solid #818cf8;
+  box-shadow: 0 5px 5px rgba(7, 7, 7, 0.118);
+}
+.project-card p {
+  color: #636363;
+  max-width: 40ch;
+}
+.actions-icons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+h4 {
+  font-size: 1.3rem;
+}
+.announcement-list,
+.trending-list {
+  margin-top: 15px;
+  background-color: #fdfdfd;
+  padding: 30px 40px 10px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 5px rgba(7, 7, 7, 0.118);
+}
+.announcement-list > *:not(:last-child) {
+  border-bottom: 1px solid #636363;
+}
+.announcement-card {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.tr-card {
+  margin-bottom: 20px;
+}
+h5 {
+  font-size: 1rem;
+}
+.announcement-card p {
+  font-size: 0.8rem;
+}
+.trending-list {
+  padding: 20px;
+}
